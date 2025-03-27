@@ -1,3 +1,9 @@
+This is my personal project of Movie booking webpage 
+which is not completed fully (20% left)
+
+created using React and TMDB API
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
