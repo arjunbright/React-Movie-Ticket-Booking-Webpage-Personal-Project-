@@ -1,0 +1,44 @@
+:root {
+    --eerie-black: #1d1d20;
+    --red-cmyk: #f42a2a;
+    --misty-rose: #fde8e9;
+    --yellow-highlight: #ffcc00;
+}
+
+/* Apply padding only to main content (not body) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--eerie-black);
+    color: var(--misty-rose);
+}
+
+.main-content {
+    padding-top: 80px; /* Matches header height */
+}
+
+/* Optional cleanup */
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

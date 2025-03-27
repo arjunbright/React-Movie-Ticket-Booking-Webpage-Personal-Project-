@@ -1,0 +1,151 @@
+:root {
+    --eerie-black: #1d1d20;
+    --red-cmyk: #f42a2a;
+    --misty-rose: #fde8e9;
+    --yellow-highlight: #ffcc00;
+    --glow-effect: 0 0 12px rgba(244, 42, 42, 0.8);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    padding-top: 80px;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: var(--eerie-black);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: var(--glow-effect);
+}
+
+.logo img {
+    height: 100px;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--red-cmyk);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+    padding: 10px 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--yellow-highlight);
+    color: black;
+}
+
+.btn-secondary {
+    background: var(--red-cmyk);
+    color: white;
+}
+
+.btn-danger {
+    background: transparent;
+    border: 2px solid var(--red-cmyk);
+    color: var(--red-cmyk);
+}
+
+.btn-danger:hover {
+    background: var(--red-cmyk);
+    color: white;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background-color: #1a1a1a;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+        padding: 20px;
+        box-shadow: var(--glow-effect);
+        border-radius: 0 0 0 10px;
+    }
+
+    .nav-container.open {
+        right: 0;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav a {
+        padding: 12px 0;
+        width: 100%;
+    }
+
+    .nav button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 55px;
+        object-fit: contain;
+    }
+}

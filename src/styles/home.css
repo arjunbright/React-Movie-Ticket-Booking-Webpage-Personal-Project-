@@ -1,0 +1,280 @@
+:root {
+    --red: #f42a2a;
+    --yellow: #ffcc00;
+    --bg-dark: #0d0d0d;
+    --text-light: #ffffff;
+    --text-muted: #ccc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.home-page {
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url("../assets/images/hero.jpg") center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    text-align: center;
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animate-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    animation: glowText 2s infinite alternate;
+}
+
+.animate-title span {
+    color: var(--red);
+}
+
+.animate-subtitle {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: var(--text-muted);
+}
+
+.hero-button {
+    background-color: var(--red);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hero-button:hover {
+    transform: scale(1.05);
+}
+
+/* Movie Grids */
+.category-section {
+    padding: 50px 30px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--yellow);
+    text-align: center;
+}
+
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.movie-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 15px;
+    color: var(--text-light);
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+}
+
+/* styles/home.css */
+
+.coming-soon {
+    position: relative;
+    padding: 100px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-overlay {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 60px 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
+    animation: fadeInUp 1s ease forwards;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+}
+
+.countdown-wrapper h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    animation: fadeIn 2s ease-in;
+}
+
+.countdown {
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px #f42a2a;
+    animation: pulseGlow 2s infinite;
+}
+
+.coming-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 30px 0 20px;
+    color: #fff;
+    text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+}
+
+.coming-title strong {
+    color: #ffcc00;
+    text-shadow: 0 0 25px #ffcc00;
+}
+
+.coming-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #ddd;
+    opacity: 0.95;
+}
+
+.book-btn {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: #ffcc00;
+    color: #1d1d1d;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px #ffcc00;
+    animation: pulse 2s infinite;
+}
+
+.book-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ffcc00, 0 0 40px #ffcc00;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulseGlow {
+    0%,
+    100% {
+        text-shadow: 0 0 20px #f42a2a;
+    }
+    50% {
+        text-shadow: 0 0 40px #f42a2a, 0 0 60px #f42a2a;
+    }
+}
+
+@keyframes glowText {
+    from {
+        text-shadow: 0 0 10px var(--red), 0 0 20px var(--red);
+    }
+    to {
+        text-shadow: 0 0 20px var(--yellow), 0 0 30px var(--yellow);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px #ffcc00;
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 40px #ffcc00;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-overlay {
+        padding: 30px;
+    }
+
+    .animate-title {
+        font-size: 2.5rem;
+    }
+
+    .movie-grid {
+        gap: 15px;
+    }
+
+    .movie-card {
+        width: 160px;
+    }
+
+    .coming-overlay {
+        padding: 30px;
+    }
+
+    .countdown {
+        font-size: 1.8rem;
+    }
+
+    .glow {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,350 @@
+/* Ultimate Movie Detail Page Styling */
+
+:root {
+    --eerie-black: #1d1d20;
+    --red-cmyk: #f42a2a;
+    --misty-rose: #fde8e9;
+    --yellow-highlight: #ffcc00;
+    --dark-gradient: linear-gradient(135deg, #100f10, #1d1d20);
+    --glow-effect: 0px 0px 20px rgba(244, 42, 42, 0.9);
+}
+
+body {
+    background-color: var(--eerie-black);
+    color: var(--misty-rose);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.movie-detail-container {
+    max-width: 100%;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+    background: var(--dark-gradient);
+    box-shadow: var(--glow-effect);
+}
+
+.trailer-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.trailer-container iframe {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: var(--glow-effect);
+}
+
+.movie-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--red-cmyk);
+    border-radius: 10px;
+    box-shadow: var(--glow-effect);
+    color: var(--eerie-black);
+    font-weight: bold;
+}
+
+.movie-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.movie-details-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.movie-details-right h2 {
+    font-size: 2.5rem;
+    color: var(--red-cmyk);
+}
+
+.movie-details-right .rating {
+    font-size: 1.2rem;
+    color: var(--yellow-highlight);
+}
+
+.movie-details-right .overview {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--misty-rose);
+}
+
+.book-btn-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.movie-poster {
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: var(--glow-effect);
+}
+
+.movie-info {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+}
+
+.movie-info h2 {
+    font-size: 2.5rem;
+    color: var(--red-cmyk);
+    margin-bottom: 10px;
+}
+
+.movie-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--misty-rose);
+}
+
+.genre-container {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--yellow-highlight);
+    margin-bottom: 15px;
+}
+
+.extra-details {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.cast-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr)); /* 3 columns */
+    gap: 20px;
+    justify-content: center;
+}
+
+.cast-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--misty-rose);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    color: var(--eerie-black);
+    box-shadow: var(--glow-effect);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cast-card:hover {
+    transform: scale(1.1);
+}
+
+.cast-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.cast-booking-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cast-container h3 {
+    margin-bottom: 10px;
+    color: var(--misty-rose);
+}
+
+.genre-container {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--yellow-highlight);
+}
+
+.book-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.book-ticket {
+    background-color: var(--yellow-highlight);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: var(--glow-effect);
+    transition: transform 0.3s;
+}
+
+.book-ticket:hover {
+    transform: scale(1.1);
+}
+
+.recommended-movies {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.recommended-movies h3 {
+    font-size: 2rem;
+    color: var(--red-cmyk);
+    margin-bottom: 20px;
+    text-shadow: var(--glow-effect);
+}
+
+.recommended-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.recommended-card {
+    background-color: var(--misty-rose);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 180px;
+    color: var(--eerie-black);
+    box-shadow: var(--glow-effect);
+    transition: transform 0.3s;
+}
+
+.recommended-card:hover {
+    transform: scale(1.1);
+}
+
+.recommended-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive Design for Movie Detail Page */
+@media (max-width: 768px) {
+    .movie-detail-container {
+        padding: 30px 20px;
+    }
+
+    .movie-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .movie-info-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .movie-poster {
+        width: 90%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    .movie-info {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .movie-info h2 {
+        font-size: 2rem;
+    }
+
+    .movie-info p {
+        font-size: 1rem;
+    }
+
+    .genre-container {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .trailer-container {
+        height: 250px;
+    }
+
+    .trailer-container iframe {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .cast-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    .cast-card {
+        padding: 10px;
+    }
+
+    .book-ticket {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+
+    .recommended-movies {
+        padding: 20px;
+    }
+
+    .recommended-movies h3 {
+        font-size: 1.6rem;
+    }
+
+    .recommended-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .recommended-card {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .recommended-card img {
+        height: 180px;
+    }
+}

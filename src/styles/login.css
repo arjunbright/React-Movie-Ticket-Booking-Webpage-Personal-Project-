@@ -1,0 +1,226 @@
+:root {
+    --yellow-highlight: #ffcc00;
+    --red-cmyk: #f42a2a;
+}
+
+/* Global */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    color: white;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    animation: fadeInUp 0.8s ease;
+}
+
+/* Box */
+.login-box {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #222;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0px 12px 30px rgba(255, 0, 0, 0.5);
+    padding: 40px;
+    gap: 40px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Left Image */
+.login-image {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+}
+
+/* Right Form */
+.login-form {
+    flex: 1.2;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #222;
+    gap: 30px;
+}
+
+.login-form h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--yellow-highlight);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 16px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 12px;
+    background-color: #333;
+    color: white;
+    font-size: 1.2rem;
+}
+
+input:focus {
+    outline: 4px solid var(--yellow-highlight);
+    background-color: #444;
+}
+
+/* Checkbox */
+.admin-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: var(--yellow-highlight);
+    border: none;
+    padding: 16px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 100%;
+    font-weight: bold;
+    color: #222;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+.google-signin {
+    background-color: #db4437;
+    color: white;
+    padding: 16px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.google-signin:hover {
+    background-color: #c1351d;
+}
+
+/* ------------------------- */
+/* ✅ Responsive Fixes */
+/* ------------------------- */
+@media (max-width: 768px) {
+    .login-box {
+        flex-direction: column;
+        padding: 30px;
+        width: 95%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .login-image {
+        display: none;
+    }
+
+    .login-form {
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .login-form h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    input {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .admin-checkbox {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    button,
+    .google-signin {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .google-signin {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form h2 {
+        font-size: 1.7rem;
+    }
+
+    input,
+    button,
+    .google-signin {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form h2 {
+        font-size: 1.8rem;
+    }
+
+    input,
+    button,
+    .google-signin {
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+}

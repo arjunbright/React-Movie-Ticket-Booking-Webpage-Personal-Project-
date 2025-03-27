@@ -1,0 +1,249 @@
+:root {
+    --eerie-black: #1d1d20;
+    --red-cmyk: #f42a2a;
+    --misty-rose: #fde8e9;
+    --yellow-highlight: #ffcc00;
+    --dark-gradient: linear-gradient(135deg, #100f10, #1d1d20);
+    --glow-effect: 0px 0px 20px rgba(244, 42, 42, 0.9);
+}
+/* Root Variables already defined */
+
+.booking-container {
+    background-color: var(--eerie-black);
+    color: var(--misty-rose);
+    min-height: 100vh;
+    padding: 40px;
+    font-family: "Poppins", sans-serif;
+}
+
+.booking-content {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--dark-gradient);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--glow-effect);
+}
+
+.poster {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--glow-effect);
+}
+
+.movie-title {
+    margin: 20px 0;
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+}
+
+.selected-seat-list {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.seat-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--misty-rose);
+    font-size: 1rem;
+}
+
+.total-price {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    color: var(--yellow-highlight);
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Date & Time */
+.booking-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: var(--dark-gradient);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--glow-effect);
+}
+
+.date-picker,
+.time-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.date-picker h3,
+.time-picker h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: var(--yellow-highlight);
+}
+
+.date-picker button,
+.time-picker button {
+    background-color: transparent;
+    color: var(--misty-rose);
+    border: 1px solid var(--red-cmyk);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.date-picker button:hover,
+.time-picker button:hover {
+    background-color: var(--red-cmyk);
+    color: var(--eerie-black);
+}
+
+.calendar-input {
+    background-color: transparent;
+    color: var(--misty-rose);
+    border: 2px solid var(--red-cmyk);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.calendar-input:hover {
+    background-color: var(--red-cmyk);
+    color: var(--eerie-black);
+}
+
+.calendar-input::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Ensures date icon is visible on dark background */
+}
+
+.selection-summary {
+    background: var(--dark-gradient);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: var(--glow-effect);
+    color: var(--misty-rose);
+    font-size: 0.95rem;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+.selection-summary h4 {
+    margin-bottom: 10px;
+    color: var(--yellow-highlight);
+}
+
+/* Seat Selection */
+.seat-selection {
+    margin-top: 20px;
+    background: var(--dark-gradient);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--glow-effect);
+}
+
+.screen {
+    text-align: center;
+    background: var(--red-cmyk);
+    color: var(--eerie-black);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: var(--glow-effect);
+}
+
+.seats {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.seat {
+    background-color: var(--misty-rose);
+    color: var(--eerie-black);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.seat:hover {
+    background-color: var(--red-cmyk);
+    color: var(--misty-rose);
+}
+
+.seat.selected {
+    background-color: var(--red-cmyk);
+    color: var(--misty-rose);
+    box-shadow: var(--glow-effect);
+}
+
+/* Footer Buttons */
+.booking-footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: 2px solid var(--red-cmyk);
+    color: var(--red-cmyk);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cancel-btn:hover {
+    background-color: var(--red-cmyk);
+    color: var(--eerie-black);
+}
+
+.purchase-btn {
+    background-color: var(--red-cmyk);
+    color: var(--eerie-black);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: var(--glow-effect);
+}
+
+.purchase-btn:hover {
+    background-color: var(--misty-rose);
+    color: var(--red-cmyk);
+}

@@ -1,0 +1,504 @@
+/* Import Nokara font */
+@import url("https://fonts.googleapis.com/css2?family=Nokora:wght@400;700&display=swap");
+/* Base styles and variables */
+:root {
+    --eerie-black: #1d1d20;
+    --red-cmyk: #f42a2a;
+    --misty-rose: #fde8e9;
+    --reseda-green: #7f9172;
+    --hookers-green: #567568;
+
+    --bg-primary: var(--eerie-black);
+    --bg-secondary: #2a2a2e;
+    --bg-card: #27272c;
+    --text-primary: #f1f1f1;
+    --text-secondary: #b8b8b8;
+    --text-muted: #888;
+    --accent: var(--red-cmyk);
+    --accent-hover: #ff4747;
+    --secondary-accent: var(--reseda-green);
+    --secondary-accent-hover: var(--hookers-green);
+    --border-color: #3a3a3f;
+
+    --border-radius: 4px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+button {
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1.25rem;
+    transition: var(--transition);
+}
+
+/* Layout Containers */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.home-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #222;
+    font-family: "Nokora", sans-serif;
+}
+
+/* Logo styles */
+.logo img {
+    height: 100px;
+}
+
+/* Navigation styles */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Good spacing between nav items */
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+    background-color: #ff0000; /* Red buttons */
+    color: white;
+    border: 2px solid #ff0000;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Nokora", sans-serif;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-danger:hover {
+    background-color: white; /* White background on hover */
+    color: #ff0000; /* Red text on hover */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 500px;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../assets/images/howtotrainyourdragon.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.hero-details {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 0 3rem;
+    max-width: 600px;
+}
+
+.hero-details h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-details p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+}
+
+.hero-details button {
+    margin-right: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+input::placeholder {
+    color: var(--text-muted);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(244, 42, 42, 0.2);
+}
+
+form button {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+form button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filters button {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+}
+
+.filters button:hover,
+.filters button.active {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* Movie Cards Grid */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Movie Card */
+.movie-card {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border-color: var(--accent);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.movie-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    font-size: 1.25rem;
+}
+
+.movie-card p {
+    padding: 0 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.movie-card .buttons {
+    display: flex;
+    padding: 0 1rem 1rem;
+    gap: 0.5rem;
+}
+
+.movie-card .buttons button {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.watch-trailer {
+    background-color: rgba(127, 145, 114, 0.2);
+    color: var(--secondary-accent);
+    border: 1px solid var(--secondary-accent);
+}
+
+.watch-trailer:hover {
+    background-color: var(--secondary-accent);
+    color: white;
+}
+
+.buy-ticket {
+    background-color: var(--accent);
+    color: white;
+}
+
+.buy-ticket:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 400px;
+    }
+
+    .hero-details {
+        padding: 0 2rem;
+    }
+
+    .hero-details h1 {
+        font-size: 2.5rem;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none; /* Toggle with JavaScript */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--bg-secondary);
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        z-index: 100;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav button,
+    .nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .hero-details h1 {
+        font-size: 2rem;
+    }
+
+    .hero-details p {
+        font-size: 1rem;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Utility Classes */
+.lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+.lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.lato-thin-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+.lato-light-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+.lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.lato-bold-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.lato-black-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.nokora-thin {
+    font-family: "Nokora", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+.nokora-light {
+    font-family: "Nokora", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.nokora-regular {
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.nokora-bold {
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.nokora-black {
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}

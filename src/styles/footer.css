@@ -1,0 +1,124 @@
+:root {
+    --eerie-black: #1d1d20;
+    --red-cmyk: #f42a2a;
+    --misty-rose: #fde8e9;
+    --yellow-highlight: #ffcc00;
+    --glow-effect: 0 0 12px rgba(244, 42, 42, 0.8);
+}
+
+.custom-footer {
+    background-color: var(--eerie-black);
+    color: var(--misty-rose);
+    padding: 60px 40px 20px;
+    border-top: 2px solid var(--red-cmyk);
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--yellow-highlight);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--misty-rose);
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li:hover {
+    color: var(--red-cmyk);
+    cursor: pointer;
+}
+
+.subscribe-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 250px;
+}
+
+.subscribe-section input {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.subscribe-section input::placeholder {
+    color: #aaa;
+}
+
+.subscribe-section button {
+    background-color: var(--red-cmyk);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.subscribe-section button:hover {
+    background-color: #c41f1f;
+}
+
+/* Social Icons */
+.footer-social {
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 1.3rem;
+    margin: 0 12px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--red-cmyk);
+}
+
+/* Bottom */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .subscribe-section {
+        width: 100%;
+        max-width: 100%;
+    }
+}
